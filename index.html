@@ -11,16 +11,19 @@
 
     <h2>Check KWH average</h2>
     <br>
-   <input id="KWHInput"
+   <input id="KWHInput" type="number" placeholder="Enter KWH">
+
     <button class="btn btn-info" onclick="CheckKWH()">Check KWH</button>
 
     <script>
         function CheckKWH(){
-            var KWH = 0;
+            var KWH = document.getElementById("").value;
+            var A = "Lifeline Consumer"
+
             if (isNaN(KWH) || KWH < 0) {
                 alert("Please assign a valid number");
             }
-            else if (KWH < 100){
+            else if (KWH >= 100){
                 alert("You're a lifeline Consumer");
             }
             else if(KWH >= 200){
@@ -32,12 +35,9 @@
             else if(KWH >= 500){
                 alert("You're a high consumer");
             }
-            else if(KWH < 500){
-                alert("You're a very high consumer");
-            }
 
             else{
-                alert("KWH could not be classified");
+                alert("You're a very high consumer");
             }
         }
     </script>
